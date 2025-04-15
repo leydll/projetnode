@@ -3,12 +3,6 @@ import axios from "axios";
 
 function InterfaceAdmin() {
   const [evenements, setEvenements] = useState([]);
-  const [formulaire, setFormulaire] = useState({
-    titre: "",
-    lieu: "",
-    dateheure: "",
-    capacite: 0,
-  });
 
   const token = localStorage.getItem("token");
 
@@ -21,19 +15,6 @@ function InterfaceAdmin() {
   useEffect(() => {
     chargerEvenements();
   }, []);
-
-  const creerEvenement = async (e) => {
-    e.preventDefault();
-    try {
-      await axios.post("http://localhost:5003/api/evenements", formulaire, {
-        headers: { Authorization: token },
-      });
-      setFormulaire({ titre: "", lieu: "", dateheure: "", capacite: 0 });
-      chargerEvenements();
-    } catch (err) {
-      alert(err.response?.data?.message || "Erreur création événement");
-    }
-  };
 
   const supprimerEvenement = async (id) => {
     try {
@@ -59,7 +40,7 @@ function InterfaceAdmin() {
             🎟️ Places restantes : {e.available_seats}
           </p>
           <button onClick={() => supprimerEvenement(e.id_evenement)}>
-            🗑 Supprimer
+            Supprimer
           </button>
         </div>
       ))}
