@@ -1,0 +1,376 @@
+/* RESET & GLOBAL */
+body {
+  margin: 0;
+  font-family: Helvetica, sans-serif;
+  background-color: #f5f5f5;
+  color: #2c2c2c;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* LAYOUT PRINCIPAL */
+.app-container {
+  display: flex;
+  height: 100vh;
+}
+
+/* NAVBAR GAUCHE */
+.navbar {
+  width: 15%;
+  background-color: #2c2c2c;
+  color: white;
+  padding: 30px 20px;
+}
+
+.navbar h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.navbar a {
+  display: block;
+  margin-bottom: 12px;
+  color: white;
+  padding: 6px 0;
+  border-left: 4px solid transparent;
+}
+
+.navbar a:hover {
+  border-left: 4px solid #a6a6a6;
+  background-color: #3a3a3a;
+}
+
+/* CONTENU CENTRAL */
+.main-content {
+  width: 70%;
+  padding: 30px;
+  overflow-y: auto;
+  background-color: white;
+}
+
+/* BOÎTES POUR CHAQUE ÉVÉNEMENT */
+.event-box {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fdfdfd;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.event-box h3 {
+  margin-top: 0;
+  color: #2c2c2c;
+}
+
+.event-box p {
+  margin: 5px 0;
+  color: #555;
+}
+
+/* COLONNE DROITE - DÉCONNEXION */
+.logout-section {
+  width: 15%;
+  background-color: #eaeaea;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.logout-section button {
+  background-color: #a6a6a6;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.logout-section button:hover {
+  background-color: #888888;
+}
+
+/* === FORMULAIRES D'AUTHENTIFICATION ET CRÉATION === */
+.form-block {
+  background-color: #ffffff;
+  border: 1px solid #dcdcdc;
+  border-radius: 8px;
+  padding: 25px;
+  max-width: 500px;
+  margin: 20px auto;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.form-block h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2c2c2c;
+}
+
+.form-block input,
+.form-block textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.form-block button {
+  width: 100%;
+  background-color: #2c2c2c;
+  color: white;
+  padding: 10px;
+  font-size: 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form-block button:hover {
+  background-color: #444;
+}
+
+.event-page {
+  padding: 20px;
+}
+
+.event-page h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #2c2c2c;
+}
+
+.event-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.event-box {
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.event-box:hover {
+  transform: translateY(-5px);
+}
+
+.event-box h3 {
+  color: #2c2c2c;
+  margin-top: 0;
+}
+
+.auth-form {
+  background-color: #ffffff;
+  border: 1px solid #dcdcdc;
+  border-radius: 8px;
+  padding: 30px;
+  max-width: 400px;
+  margin: 40px auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.auth-form h2 {
+  text-align: center;
+  color: #2c2c2c;
+  margin-bottom: 25px;
+  font-size: 22px;
+}
+
+.auth-form input,
+.auth-form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.auth-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #2c2c2c;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.auth-form button:hover {
+  background-color: #444;
+}
+
+/* Message déjà connecté */
+.auth-message {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 20px;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.auth-message button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #a6a6a6;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.reservation-page {
+  padding: 20px;
+}
+
+.reservation-page h2 {
+  text-align: center;
+  color: #2c2c2c;
+  margin-bottom: 30px;
+}
+
+.reservation-box {
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 8px;
+  max-width: 600px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.reservation-box h4 {
+  margin-top: 0;
+  color: #2c2c2c;
+}
+
+.reservation-box p {
+  margin: 6px 0;
+  color: #555;
+  font-size: 15px;
+}
+
+.reservation-page p.error {
+  color: red;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* === FORMULAIRE DE CRÉATION D'ÉVÉNEMENT === */
+.event-create-form {
+  background-color: #ffffff;
+  border: 1px solid #dcdcdc;
+  border-radius: 8px;
+  padding: 30px;
+  max-width: 500px;
+  margin: 30px auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.event-create-form h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2c2c2c;
+}
+
+.event-create-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.event-create-form button {
+  width: 100%;
+  background-color: #2c2c2c;
+  color: white;
+  padding: 10px;
+  font-size: 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.event-create-form button:hover {
+  background-color: #444;
+}
+
+/* === LISTE DES ÉVÉNEMENTS ADMIN === */
+.admin-event-list {
+  padding: 20px;
+}
+
+.admin-event-list h2,
+.admin-event-list h3 {
+  color: #2c2c2c;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.admin-event-box {
+  background-color: #fdfdfd;
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 15px auto;
+  border-radius: 8px;
+  max-width: 600px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+}
+
+.admin-event-box p {
+  margin: 5px 0;
+  color: #333;
+}
+
+.admin-event-box button {
+  margin-top: 10px;
+  background-color: #a63c3c;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.admin-event-box button:hover {
+  background-color: #902e2e;
+}
+.event-box button {
+  margin-top: 10px;
+  background-color: #2c2c2c;
+  color: #ffffff;
+  border: none;
+  padding: 10px 16px;
+  font-size: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.event-box button:hover {
+  background-color: #444444;
+}
+
+.event-box button:disabled {
+  background-color: #a6a6a6;
+  color: #f0f0f0;
+  cursor: not-allowed;
+}
