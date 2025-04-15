@@ -3,6 +3,7 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 require("dotenv").config();
 
+// inscription
 exports.inscription = (req, res) => {
   const { email, motdepasse, role } = req.body;
 
@@ -20,6 +21,7 @@ exports.inscription = (req, res) => {
   });
 };
 
+//connexion
 exports.connexion = (req, res) => {
   const { email, motdepasse } = req.body;
 

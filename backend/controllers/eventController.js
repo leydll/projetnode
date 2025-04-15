@@ -3,7 +3,6 @@ const {
   ajouterEvenementCalendrier,
   listerEvenements,
 } = require("../models/googleCalendar");
-
 const { envoyerSMS } = require("../models/twilio");
 
 // créer un événement (admin)
@@ -64,14 +63,14 @@ exports.reserverEvenement = (req, res) => {
             await ajouterEvenementCalendrier(evenement);
             await listerEvenements();
           } catch (e) {
-            console.error("❌ Erreur Google Calendar :", e);
+            console.error(" Erreur Google Calendar :", e);
           }
 
           // envoyer un mess
           try {
             await envoyerSMS(evenement);
           } catch (e) {
-            console.error("❌ Erreur Twilio :", e);
+            console.error(" Erreur Twilio :", e);
           }
 
           // notification en temps réel

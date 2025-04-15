@@ -54,7 +54,7 @@ async function listerEvenements() {
     orderBy: "startTime",
   });
 
-  console.log("📅 Événements à venir :");
+  console.log(" Événements à venir :");
   res.data.items.forEach((e) =>
     console.log(`→ ${e.summary} à ${e.location} le ${e.start.dateTime}`)
   );

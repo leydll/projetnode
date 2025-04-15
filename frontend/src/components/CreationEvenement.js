@@ -18,7 +18,7 @@ function EventCreate() {
         headers: { Authorization: token },
       });
 
-      alert("✅ Événement créé avec succès !");
+      alert(" Événement créé avec succès !");
       setForm({ titre: "", lieu: "", dateheure: "", capacite: 0 });
     } catch (err) {
       alert(err.response?.data?.message || "Erreur lors de la création");

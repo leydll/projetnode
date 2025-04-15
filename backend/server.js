@@ -29,5 +29,5 @@ io.on("connection", (socket) => {
 app.set("socketio", io);
 
 server.listen(process.env.PORT || 5000, () => {
-  console.log(`✅ Serveur démarré sur le port ${process.env.PORT}`);
+  console.log(`Serveur démarré sur le port ${process.env.PORT}`);
 });
